@@ -30,6 +30,7 @@
             </select>
             <div class="nisab-negeri">
                 <h4 class="nisab-title">Nisab 2025</h4>
+                <span>RM</span>
                 <span id="nisab">40000</span>
             </div>
         </div>
@@ -46,13 +47,88 @@
             </ul>
         </section>
         <fieldset class="dashboard">
-            <section class="input">
-                mcdke
-            </section>
-            <section class="output">
-                jumlah perlu
-            </section>
-            
+            <div id="zakat-pendapatan-ds">
+                <h3 class="title-ds">Zakat Pendapatan</h3><span><p class="desc">(tanpa tolakan)</p></span>
+                <section class="input-sec">
+                    <h4>Pendapatan <select ><option id="pendapatan-bulanan" value="bulanan">Bulanan</option><option id="pendapatan-tahunan" value="tahunan">Tahunan</option></select></h4>
+                    <input type="number" min="0" id="pendapatan-in">
+                    <h4>Pendapatan Lain<span> (Bonus, Sewaan, Pencen, Hadiah, dll)</span></h4>
+                    <input type="number" min="0" id="pendapatan-lain-in">
+
+                </section>
+                <section class="output-sec">
+                    <h4>Jumlah Zakat Pendapatan Setahun <span>(2.5% setahun)</span></h4>
+                    <div class="card">RM <span id="zakat-pendapatan-akhir">0</span></div>
+
+                </section>
+            </div>
+            <div id="zakat-saham-ds">
+                <h3 class="title-ds">Zakat Saham</h3>
+                <section class="input-sec">
+                    <h4>Unit <span>(mesti patuh syariah)</span></h4>   
+                    <input type="number" min="0" id="unit-in">
+                    <h4>Harga semasa (RM)</h4>
+                    <input type="number" min="0" id="harga-saham-semasa-in">
+                    <h4>Dividen</h4>
+                    <input type="number" min="0" id="dividen-in">
+                    
+                </section>
+                <section class="output-sec">
+                    <h4>Jumlah Zakat Saham Setahun <span>(2.5% setahun)</span></h4>
+                    <div class="card">RM <span id="zakat-saham-akhir">0</span></div>
+                     
+                </section>
+            </div>   
+            <div id="zakat-emas-ds">
+                <h3 class="title-ds">Zakat Emas</h3>
+                <section class="input-sec">
+                    <h4>Berat (gram)</h4>
+                    <input type="number" min="0" id="berat-in">
+                    <h4>Jenis emas <select><option> simpan </option></select></h4>
+                    <h4>Harga Emas Semasa</h4>
+                    <input type="number" min="0" id="harga-emas-semasa-in">
+                </section>
+                <section class="output-sec">
+                    <h4>Jumlah Zakat Emas Setahun <span>(2.5% setahun)</span></h4>
+                    <div class="card">RM <span id="zakat-emas-akhir">0</span></div>
+                </section>
+            </div>
+            <div id="zakat-perak-ds">
+                <h3 class="title-ds">Zakat Perak</h3>
+                <section class="input-sec">
+                    <h4>Berat (gram)</h4>
+                    <input type="number" min="0" id="berat-in">
+                    <h4>Harga Perak Semasa</h4>
+                    <input type="number" min="0" id="harga-emas-semasa-in">
+                </section>
+                <section class="output-sec">
+                    <h4>Jumlah Zakat Emas Setahun <span>(2.5% setahun)</span></h4>
+                    <div class="card">RM <span id="zakat-emas-akhir">0</span></div>
+                </section>
+
+            </div>
+            <div id="zakat-kwsp-ds">
+                <section class="input-sec">
+                    
+                </section>
+                <section class="output-sec">
+                </section>
+            </div>
+            <div id="zakat-simpanan-ds">
+                            <section class="input-sec">
+                            </section>
+                            <section class="output-sec">
+                 </section></div>  
+             <div id="zakat-ternakan-ds">
+                <section class="input-sec">
+                </section>
+                <section class="output-sec">
+                </section></div>  
+            <div id="zakat-perniaigaan-ds">
+                <section class="input-sec">
+                </section>
+                <section class="output-sec">
+                </section></div>              
         </fieldset>
     </main>
     

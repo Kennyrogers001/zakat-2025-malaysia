@@ -7,7 +7,10 @@ header>h1{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
 }
-
+main{
+    margin-left: 6%;
+    margin-right: 6%;
+}
 .negeri{
     text-align: center;
     background-color: rgb(247, 189, 123);
@@ -36,12 +39,17 @@ header>h1{
 }
 ul{
     list-style: none;
-    width: fit-content;
     margin: auto;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
 }
+
 button{
-    width: 200px;
+    width: fit-content;
     text-wrap: wrap;
     text-align: center;
     padding: 10px;
@@ -53,4 +61,50 @@ button{
 }
 button:hover{
     background-color: antiquewhite;
+}
+
+fieldset{
+    background-color:rgb(247, 189, 123);
+    border:none;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;;
+    
+}
+h3{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.desc{
+    text-align: center;
+}
+h4>span{
+    font-size: smaller;
+}
+h4>select{
+    border-radius: 20px;
+    padding: 3px;
+}
+.input-sec, .output-sec{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+input[type=number]{
+    border-radius: 50px;
+    border: none;  
+    text-align: center;  
+}
+#zakat-pendapatan-ds{
+    display: none;
+}
+#zakat-saham-ds{
+    display: none;
+}
+
+#zakat-emas-ds{
+    display: none;
+}
+
+#zakat-perak-ds{
+    display: none;
 }
