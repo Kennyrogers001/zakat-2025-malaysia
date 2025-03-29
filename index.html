@@ -108,28 +108,92 @@
 
             </div>
             <div id="zakat-kwsp-ds">
+                <h3 class="title-ds">Zakat KWSP</h3>
                 <section class="input-sec">
+                    <h4>Jenis Pengeluaran <select>
+                        <option> Simpanan melebihi 1 Juta </option>
+                        <option> Umur mencapai 50 tahun </option>
+                        <option> Umur mencapai 55 tahun </option>
+                        <option> Umur mencapai 60 tahun </option>
+                        <option> Meninggalkan negara (hilang kerakyatan) </option>
+                        <option> Pekerja pencen & pesara pilihan </option>
+                        <option> Pendidikan</option>
+                        <option> Kesihatan</option>
+                        <option> Pembiayaan perumahan (pelaburan)</option>
+                        <option> Pembiayaan perumahan (keperluan asas)</option>
+                    </select></h4>
+                    <span id="kwsp-exclude">*Jenis pengeluaran ini tidak dikenakan zakat.</span>
+                    <h4>Jumlah Pengeluaran</h4>
+                    <input type="number" min="0" id="jumlah-pengeluaran-in">
                     
                 </section>
                 <section class="output-sec">
+                    <h4>Jumlah Zakat KWSP Setahun <span>(2.5% setahun)</span></h4>
+                    <div class="card">RM <span id="zakat-kwsp-akhir">0</span></div>
                 </section>
             </div>
             <div id="zakat-simpanan-ds">
-                            <section class="input-sec">
-                            </section>
-                            <section class="output-sec">
+                <h3 class="title-ds">Zakat Wang Simpanan</h3>
+                    <section class="input-sec">
+                        <h4>Jumlah Wang Simpanan</h4>
+                        <input type="number" min="0" id="jumlah-simpanan-in">
+                        
+                    </section>
+                    <section class="output-sec">
+                        <h4>Jumlah Zakat Wang Simpanan Setahun <span>(2.5% setahun)</span></h4>
+                        <div class="card">RM <span id="zakat-simpanan-akhir">0</span></div>
+                        
                  </section></div>  
              <div id="zakat-ternakan-ds">
+                <h3 class="title-ds">Zakat Ternakan</h3>
                 <section class="input-sec">
+                    <h4>Jenis Haiwan Ternakan 
+                    <select id="jenis-ternakan">
+                        <option value="kambing">kambing</option>
+                        <option value="lembu">lembu</option>
+                    </select></h4>
+                    <h4>Bilangan ternakan</h4>
+                    <input type="number" min="0" id="bilangan-ternakan-in">
+                    
                 </section>
                 <section class="output-sec">
+                    <h4>Jumlah Zakat Ternakan Setahun </h4>
+                    <div class="card"><span id="zakat-ternakan-akhir">0</span> </div>
                 </section></div>  
-            <div id="zakat-perniaigaan-ds">
+            <div id="zakat-perniagaan-ds">
+                <h3 class="title-ds">Zakat Perniagaan</h3><span><p class="desc">(Kaedah Untung Rugi)</p></span>
                 <section class="input-sec">
+                    <h4>Hasil / Jualan / Perolehan untuk setahun</h4>
+                    <input type="number" min="0" id="hasil-jualan-in">
+                    <h4>tolak: Belanja / Kos untuk Setahun</h4>
+                    <input type="number" min="0" id="tolak-belanja-in">
+                    </h4>
                 </section>
                 <section class="output-sec">
-                </section></div>              
+                    <h4>Jumlah Zakat Perniagaan Setahun <span>(2.5% setahun)</span></h4>
+                    <div class="card">RM <span id="zakat-perniagaan-akhir">0</span></div>
+
+                </section></div> 
+                             
         </fieldset>
+        <footer>
+            <div class="last">sumber data: <br>
+                <a href="https://www.maij.gov.my/cal/index.html">Johor</a>
+                <a href="https://jom.zakatkedah.com.my/kirazakat/tabkirazakat.php">Kedah</a>
+                <a href="https://zakat.e-maik.my/v8/kalkulator/zakat_pendapatan.php">Kelantan</a>
+                <a href="http://www100.izakat.com/kalkulator/Kalkulator_Pendapatan_2.html">Melaka</a>
+                <a href="https://mains.gov.my/v5/web/taksir.php">Negeri Sembilan</a>
+                <a href="https://zakatpahang.my/kira-zakat/">Pahang</a>
+                <a href="https://www.zakatpenang.com/kalkulator-zakat/">Pulau Pinang</a>
+                <a href="https://www.maiamp.gov.my/kalkulatorzakat/">Perak</a>
+                <a href="https://maips.gov.my/index.php?option=com_sppagebuilder&view=page&id=546&lang=img">Perlis</a>
+                <a href="https://appszakat.sabah.gov.my/kalkulatorPendapatan.php">Sabah</a>
+                <a href="https://kalkulator.tbs.org.my/">Sarawak</a>
+                <a href="https://bayarzakatmalaysia.my/?msclkid=2ff7c29b1fb217dea88ca57c6cfe7c1d&utm_source=bing&utm_medium=cpc&utm_campaign=Idea%20001%20pendapatan%20-%20selangor&utm_term=zakat%20pendapatan%20selangor&utm_content=Ad%20group%201#zakatbm">Selangor</a>
+                <a href="https://ezakat.maidam.gov.my/online/kalkulatorzakat.php">Terengganu</a>
+                <a href="https://www.zakat2u.com.my/kiraan/zakat">Wilayah Persekutuan</a>
+            </div>
+        </footer>
     </main>
     
     

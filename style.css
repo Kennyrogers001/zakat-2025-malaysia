@@ -84,6 +84,13 @@ h4>span{
 h4>select{
     border-radius: 20px;
     padding: 3px;
+    display: flex;
+    text-wrap: wrap;
+    text-align: center;
+    text-overflow: wrap;
+}
+#zakat-kwsp-ds>.input-sec>h4>select{
+    width: 100%;
 }
 .input-sec, .output-sec{
     margin-left: 15%;
@@ -93,6 +100,9 @@ input[type=number]{
     border-radius: 50px;
     border: none;  
     text-align: center;  
+}
+.card{
+    margin-bottom: 15px;
 }
 #zakat-pendapatan-ds{
     display: none;
@@ -107,4 +117,28 @@ input[type=number]{
 
 #zakat-perak-ds{
     display: none;
+}
+#zakat-kwsp-ds{
+    display: none;
+}
+#kwsp-exclude{
+    color: greenyellow;
+    background-color: black;
+    display:none ;
+}
+#zakat-simpanan-ds{
+    display: none;
+}
+#zakat-ternakan-ds{
+    display: none;
+}
+#zakat-perniagaan-ds{
+    display: none;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(247, 189, 123);
+    border-radius: 20px;
+    padding: 8px;
 }
