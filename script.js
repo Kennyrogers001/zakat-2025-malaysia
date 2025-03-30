@@ -23,6 +23,113 @@ negeriSelect.addEventListener('change', () => {
     nisabElement.textContent = nisabData[selectedNegeri];
 });
 
+//dynamic button-list to dashboard
+const zakatPendapatanButton = document.getElementById("z-pendapatan");
+const zakatPerniagaanButton = document.getElementById("z-perniagaan");
+const zakatSahamButton = document.getElementById("z-saham");
+const zakatEmasButton = document.getElementById("z-emas");
+const zakatPerakButton = document.getElementById("z-perak");
+const zakatKwspButton = document.getElementById("z-kwsp");
+const zakatWangSimpananButton = document.getElementById("z-wang-simpanan");
+const zakatTernakanButton = document.getElementById("z-ternakan");
+
+const zakatPendapatanDs = document.getElementById("zakat-pendapatan-ds");
+const zakatPerniagaanDs = document.getElementById("zakat-perniagaan-ds");
+const zakatSahamDs = document.getElementById("zakat-saham-ds");
+const zakatEmasDs = document.getElementById("zakat-emas-ds");
+const zakatPerakDs = document.getElementById("zakat-perak-ds");
+const zakatKwspDs = document.getElementById("zakat-kwsp-ds");
+const zakatSimpananDs = document.getElementById("zakat-simpanan-ds");
+const zakatTernakanDs = document.getElementById("zakat-ternakan-ds");
+
+zakatPendapatanButton.addEventListener("click", () => {
+    zakatPendapatanDs.style.display = "block";
+    zakatPerniagaanDs.style.display = "none";
+    zakatSahamDs.style.display = "none";
+    zakatEmasDs.style.display = "none";
+    zakatPerakDs.style.display = "none";
+    zakatKwspDs.style.display = "none";
+    zakatSimpananDs.style.display = "none";
+    zakatTernakanDs.style.display = "none";
+});
+
+zakatPerniagaanButton.addEventListener("click", () => {
+    zakatPendapatanDs.style.display = "none";
+    zakatPerniagaanDs.style.display = "block";
+    zakatSahamDs.style.display = "none";
+    zakatEmasDs.style.display = "none";
+    zakatPerakDs.style.display = "none";
+    zakatKwspDs.style.display = "none";
+    zakatSimpananDs.style.display = "none";
+    zakatTernakanDs.style.display = "none";
+});
+
+zakatSahamButton.addEventListener("click", () => {
+    zakatPendapatanDs.style.display = "none";
+    zakatPerniagaanDs.style.display = "none";
+    zakatSahamDs.style.display = "block";
+    zakatEmasDs.style.display = "none";
+    zakatPerakDs.style.display = "none";
+    zakatKwspDs.style.display = "none";
+    zakatSimpananDs.style.display = "none";
+    zakatTernakanDs.style.display = "none";
+});
+
+zakatEmasButton.addEventListener("click", () => {
+    zakatPendapatanDs.style.display = "none";
+    zakatPerniagaanDs.style.display = "none";
+    zakatSahamDs.style.display = "none";
+    zakatEmasDs.style.display = "block";
+    zakatPerakDs.style.display = "none";
+    zakatKwspDs.style.display = "none";
+    zakatSimpananDs.style.display = "none";
+    zakatTernakanDs.style.display = "none";
+});
+
+zakatPerakButton.addEventListener("click", () => {
+    zakatPendapatanDs.style.display = "none";
+    zakatPerniagaanDs.style.display = "none";
+    zakatSahamDs.style.display = "none";
+    zakatEmasDs.style.display = "none";
+    zakatPerakDs.style.display = "block";
+    zakatKwspDs.style.display = "none";
+    zakatSimpananDs.style.display = "none";
+    zakatTernakanDs.style.display = "none";});
+
+zakatKwspButton.addEventListener("click", () => {
+    zakatPendapatanDs.style.display = "none";
+    zakatPerniagaanDs.style.display = "none";
+    zakatSahamDs.style.display = "none";
+    zakatEmasDs.style.display = "none";
+    zakatPerakDs.style.display = "none";
+    zakatKwspDs.style.display = "block";
+    zakatSimpananDs.style.display = "none";
+    zakatTernakanDs.style.display = "none";
+});
+
+zakatWangSimpananButton.addEventListener("click", () => {
+    zakatPendapatanDs.style.display = "none";
+    zakatPerniagaanDs.style.display = "none";
+    zakatSahamDs.style.display = "none";
+    zakatEmasDs.style.display = "none";
+    zakatPerakDs.style.display = "none";
+    zakatKwspDs.style.display = "none";
+    zakatSimpananDs.style.display = "block";
+    zakatTernakanDs.style.display = "none";
+});
+
+zakatTernakanButton.addEventListener("click", () => {
+    zakatPendapatanDs.style.display = "none";
+    zakatPerniagaanDs.style.display = "none";
+    zakatSahamDs.style.display = "none";
+    zakatEmasDs.style.display = "none";
+    zakatPerakDs.style.display = "none";
+    zakatKwspDs.style.display = "none";
+    zakatSimpananDs.style.display = "none";
+    zakatTernakanDs.style.display = "block";
+});
+
+
 //zakat pendapatan
 const pendapatanIn = document.getElementById("pendapatan-in");
 const pendapatanLainIn = document.getElementById("pendapatan-lain-in");
@@ -168,3 +275,4 @@ function calculateZakatPerniagaan() {
 negeriSelect.addEventListener('change', calculateZakatPerniagaan);
 hasilJualanIn.addEventListener("input", calculateZakatPerniagaan);
 tolakBelanjaIn.addEventListener("input", calculateZakatPerniagaan);
+
