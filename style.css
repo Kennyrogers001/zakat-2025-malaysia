@@ -112,11 +112,11 @@ input[type=number]{
 }
 
 #zakat-emas-ds{
-    display: block;
+    display: none;
 }
 
 #zakat-perak-ds{
-    display: none;
+    display: block;
 }
 #zakat-kwsp-ds{
     display: none;

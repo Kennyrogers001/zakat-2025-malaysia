@@ -70,3 +70,43 @@ negeriSelect.addEventListener('change', calculateZakatSaham);
 unitIn.addEventListener("input", calculateZakatSaham);
 hargaSahamSemasaIn.addEventListener("input", calculateZakatSaham);
 dividenIn.addEventListener("input", calculateZakatSaham);
+
+//zakat emas
+const beratIn = document.getElementById("berat-in");
+const hargaEmasSemasaIn = document.getElementById("harga-emas-semasa-in");
+const zakatEmasAkhir = document.getElementById("zakat-emas-akhir");
+
+function calculateZakatEmas() {
+    const berat = parseFloat(beratIn.value) || 0;
+    const hargaEmasSemasa = parseFloat(hargaEmasSemasaIn.value) || 0;
+    const totalValue = berat * hargaEmasSemasa;
+    const nisab = getSelectedNisab();
+    const zakat = berat >= 85 ? (totalValue * 0.025) : 0;
+    zakatEmasAkhir.textContent = zakat.toFixed(2);
+}
+
+negeriSelect.addEventListener('change', calculateZakatEmas);
+beratIn.addEventListener("input", calculateZakatEmas);
+hargaEmasSemasaIn.addEventListener("input", calculateZakatEmas);
+
+//zakat perak
+const beratPerakIn = document.getElementById("berat-perak-in");
+const hargaPerakSemasaIn = document.getElementById("harga-perak-semasa-in");
+const zakatPerakAkhir = document.getElementById("zakat-perak-akhir");
+
+function calculateZakatPerak() {
+    let beratPerak = parseFloat(beratPerakIn.value) || 0;
+    if (beratPerak < 595) {
+        zakatPerakAkhir.textContent = "0.00";
+        return;
+    }
+
+    const hargaPerakSemasa = parseFloat(hargaPerakSemasaIn.value) || 0;
+    const totalValue = beratPerak * hargaPerakSemasa;
+    const zakat = beratPerak >= 595 ? (totalValue * 0.025) : 0;
+    zakatPerakAkhir.textContent = zakat.toFixed(2);
+}
+
+negeriSelect.addEventListener('change', calculateZakatPerak);
+beratPerakIn.addEventListener("input", calculateZakatPerak);
+hargaPerakSemasaIn.addEventListener("input", calculateZakatPerak);
