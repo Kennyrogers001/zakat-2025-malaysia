@@ -110,3 +110,61 @@ function calculateZakatPerak() {
 negeriSelect.addEventListener('change', calculateZakatPerak);
 beratPerakIn.addEventListener("input", calculateZakatPerak);
 hargaPerakSemasaIn.addEventListener("input", calculateZakatPerak);
+
+//zakat kwsp
+const kwspType = document.getElementById("kwsp-type");
+const kwspExclude = document.getElementById("kwsp-exclude");
+
+kwspType.addEventListener("change", () => {
+    if (kwspType.value === "0") {
+        kwspExclude.style.display = "block";
+    } else if (kwspType.value === "1") {
+        kwspExclude.style.display = "none";
+    }
+});
+
+const kwspIn = document.getElementById("kwsp-in");
+const zakatKwspAkhir = document.getElementById("zakat-kwsp-akhir");
+
+function calculateZakatKwsp() {
+    const kwsp = parseFloat(kwspIn.value) || 0;
+    const nisab = getSelectedNisab();
+    const zakat = kwsp >= nisab && kwspType.value === "1" ? (kwsp * 0.025) : 0;
+    zakatKwspAkhir.textContent = zakat.toFixed(2) ;
+}
+
+negeriSelect.addEventListener('change', calculateZakatKwsp);
+kwspIn.addEventListener("input", calculateZakatKwsp);
+kwspType.addEventListener("change", calculateZakatKwsp);
+
+//zakat simpanan
+const jumlahSimpananIn = document.getElementById("jumlah-simpanan-in");
+const zakatSimpananAkhir = document.getElementById("zakat-simpanan-akhir");
+
+function calculateZakatSimpanan() {
+    const jumlahSimpanan = parseFloat(jumlahSimpananIn.value) || 0;
+    const nisab = getSelectedNisab();
+    const zakat = jumlahSimpanan >= nisab ? (jumlahSimpanan * 0.025) : 0;
+    zakatSimpananAkhir.textContent = zakat.toFixed(2);
+}
+
+negeriSelect.addEventListener('change', calculateZakatSimpanan);
+jumlahSimpananIn.addEventListener("input", calculateZakatSimpanan);
+
+//zakat perniagaan
+const hasilJualanIn = document.getElementById("hasil-jualan-in");
+const tolakBelanjaIn = document.getElementById("tolak-belanja-in");
+const zakatPerniagaanAkhir = document.getElementById("zakat-perniagaan-akhir");
+
+function calculateZakatPerniagaan() {
+    const hasilJualan = parseFloat(hasilJualanIn.value) || 0;
+    const tolakBelanja = parseFloat(tolakBelanjaIn.value) || 0;
+    const totalValue = hasilJualan - tolakBelanja;
+    const nisab = getSelectedNisab();
+    const zakat = totalValue >= nisab ? (totalValue * 0.025) : 0;
+    zakatPerniagaanAkhir.textContent = zakat.toFixed(2);
+}
+
+negeriSelect.addEventListener('change', calculateZakatPerniagaan);
+hasilJualanIn.addEventListener("input", calculateZakatPerniagaan);
+tolakBelanjaIn.addEventListener("input", calculateZakatPerniagaan);

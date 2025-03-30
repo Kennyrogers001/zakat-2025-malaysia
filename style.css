@@ -116,7 +116,7 @@ input[type=number]{
 }
 
 #zakat-perak-ds{
-    display: block;
+    display: none;
 }
 #zakat-kwsp-ds{
     display: none;
@@ -124,7 +124,7 @@ input[type=number]{
 #kwsp-exclude{
     color: greenyellow;
     background-color: black;
-    display:none ;
+    display: none;
 }
 #zakat-simpanan-ds{
     display: none;
@@ -133,7 +133,7 @@ input[type=number]{
     display: none;
 }
 #zakat-perniagaan-ds{
-    display: none;
+    display: block;
 }
 
 footer{

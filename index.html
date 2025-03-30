@@ -110,21 +110,21 @@
             <div id="zakat-kwsp-ds">
                 <h3 class="title-ds">Zakat KWSP</h3>
                 <section class="input-sec">
-                    <h4>Jenis Pengeluaran <select>
-                        <option> Simpanan melebihi 1 Juta </option>
-                        <option> Umur mencapai 50 tahun </option>
-                        <option> Umur mencapai 55 tahun </option>
-                        <option> Umur mencapai 60 tahun </option>
-                        <option> Meninggalkan negara (hilang kerakyatan) </option>
-                        <option> Pekerja pencen & pesara pilihan </option>
-                        <option> Pendidikan</option>
-                        <option> Kesihatan</option>
-                        <option> Pembiayaan perumahan (pelaburan)</option>
-                        <option> Pembiayaan perumahan (keperluan asas)</option>
+                    <h4>Jenis Pengeluaran <select id="kwsp-type">
+                        <option value="1"> Simpanan melebihi 1 Juta </option>
+                        <option value="1"> Umur mencapai 50 tahun </option>
+                        <option value="1"> Umur mencapai 55 tahun </option>
+                        <option value="1"> Umur mencapai 60 tahun </option>
+                        <option value="1"> Meninggalkan negara (hilang kerakyatan) </option>
+                        <option value="1"> Pekerja pencen & pesara pilihan </option>
+                        <option value="0"> Pendidikan</option>
+                        <option value="0"> Kesihatan</option>
+                        <option value="1"> Pembiayaan perumahan (pelaburan)</option>
+                        <option value="0"> Pembiayaan perumahan (keperluan asas)</option>
                     </select></h4>
                     <span id="kwsp-exclude">*Jenis pengeluaran ini tidak dikenakan zakat.</span>
                     <h4>Jumlah Pengeluaran</h4>
-                    <input type="number" min="0" id="jumlah-pengeluaran-in">
+                    <input type="number" min="0" id="kwsp-in">
                     
                 </section>
                 <section class="output-sec">
