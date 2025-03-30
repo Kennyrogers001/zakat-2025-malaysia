@@ -22,3 +22,51 @@ negeriSelect.addEventListener('change', () => {
     const selectedNegeri = negeriSelect.value;
     nisabElement.textContent = nisabData[selectedNegeri];
 });
+
+//zakat pendapatan
+const pendapatanIn = document.getElementById("pendapatan-in");
+const pendapatanLainIn = document.getElementById("pendapatan-lain-in");
+const zakatPendapatanAkhir = document.getElementById("zakat-pendapatan-akhir");
+
+function getSelectedNisab() {
+    const selectedNegeri = negeriSelect.value;
+    return nisabData[selectedNegeri] || 0;
+}
+
+function calculateZakatPendapatan() {
+    const pendapatan = parseFloat(pendapatanIn.value) || 0;
+    const pendapatanLain = parseFloat(pendapatanLainIn.value) || 0;
+    const totalPendapatan = pendapatan + pendapatanLain;
+    
+    const nisab = getSelectedNisab();
+    const zakat = totalPendapatan >= nisab ? (totalPendapatan * 0.025) : 0;
+    zakatPendapatanAkhir.textContent = zakat.toFixed(2);
+}
+
+negeriSelect.addEventListener('change', calculateZakatPendapatan);
+pendapatanIn.addEventListener("input", calculateZakatPendapatan);
+pendapatanLainIn.addEventListener("input", calculateZakatPendapatan);
+
+pendapatanIn.addEventListener("input", calculateZakatPendapatan);
+pendapatanLainIn.addEventListener("input", calculateZakatPendapatan);
+
+//zakat saham
+const unitIn = document.getElementById("unit-in");
+const hargaSahamSemasaIn = document.getElementById("harga-saham-semasa-in");
+const dividenIn = document.getElementById("dividen-in");
+const zakatSahamAkhir = document.getElementById("zakat-saham-akhir");
+
+function calculateZakatSaham() {
+    const unit = parseFloat(unitIn.value) || 0;
+    const hargaSahamSemasa = parseFloat(hargaSahamSemasaIn.value) || 0;
+    const dividen = parseFloat(dividenIn.value) || 0;
+    const totalValue = (unit * hargaSahamSemasa) + dividen;
+    const nisab = getSelectedNisab();
+    const zakat = totalValue >= nisab ? (totalValue * 0.025) : 0;
+    zakatSahamAkhir.textContent = zakat.toFixed(2);
+}
+
+negeriSelect.addEventListener('change', calculateZakatSaham);
+unitIn.addEventListener("input", calculateZakatSaham);
+hargaSahamSemasaIn.addEventListener("input", calculateZakatSaham);
+dividenIn.addEventListener("input", calculateZakatSaham);

@@ -112,7 +112,7 @@ input[type=number]{
 }
 
 #zakat-emas-ds{
-    display: none;
+    display: block;
 }
 
 #zakat-perak-ds{
